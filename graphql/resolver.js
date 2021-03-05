@@ -40,7 +40,7 @@ module.exports = {
       try {
          return await Todo.findAll();
       } catch (error) {
-         throw new Error('Fetch todos is not available');
+         throw new Error('Fetch todos is not available!');
       }
    },
 
@@ -51,7 +51,7 @@ module.exports = {
             done: false
          });
       } catch (error) {
-         throw new Error('Title is incorrect');
+         throw new Error('Title is incorrect!');
       }
    },
 
@@ -62,7 +62,20 @@ module.exports = {
          await todo.save();
          return todo;
       } catch (error) {
-         throw new Error('Id is required');
+         throw new Error('Id is required!');
+      }
+   },
+
+   async deleteTodo({id}) {
+      try {
+         const todos = await Todo.findAll({
+            where: {id}
+         });
+         await todos[0].destroy();
+         return true;
+      } catch (error) {
+         throw new Error('Removal failed!');
+         return false;
       }
    }
 };
