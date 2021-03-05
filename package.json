@@ -1,0 +1,31 @@
+{
+  "name": "node-mysql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ervingg/node-sql-todo-app.git"
+  },
+  "author": "Khamoido Ervin <hamoydoerik@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ervingg/node-sql-todo-app/issues"
+  },
+  "homepage": "https://github.com/ervingg/node-sql-todo-app#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.5.0",
+    "jshint": "^2.12.0",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
